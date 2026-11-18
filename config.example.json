@@ -1,0 +1,25 @@
+{
+  "_nota": "Copia questo file in 'config.json' e personalizzalo. 'tratta' e' opzionale (es. ['MILANO CENTRALE', 'ROMA TERMINI']): se omessa o vuota [], monitora l'intero percorso del treno. Puo' anche essere impostata per singolo treno con {'numero': '10001', 'tratta': ['STAZIONE A', 'STAZIONE B']}.",
+  "tratta": ["STAZIONE A", "STAZIONE B"],
+  "soglia_ritardo": 5,
+  "passo_rinotifica": 5,
+  "ignora_festivi": true,
+  "festivi_locali": {
+    "12-07": "Patrono (esempio opzionale MM-DD)"
+  },
+  "settimana": {
+    "lun": ["10001", "10002"],
+    "mar": [
+      "10001",
+      {"numero": "10003", "tratta": ["STAZIONE C", "STAZIONE D"]}
+    ],
+    "mer": ["10001", "10002"],
+    "gio": ["10001", "10002"],
+    "ven": ["10001", "10002"],
+    "sab": [],
+    "dom": []
+  },
+  "eccezioni": {
+    "2026-12-24": ["10001"]
+  }
+}

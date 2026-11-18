@@ -1,0 +1,28 @@
+# Credenziali e configurazioni riservate
+telegram.json
+config.json
+.env
+
+# Dati di stato e log locali
+stato.json
+*.tmp*
+log.txt
+log_vecchio.txt
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+ENV/
+.venv/
+
+# Ambienti di sviluppo e OS
+.idea/
+.vscode/
+*.swp
+.DS_Store
+Thumbs.db
