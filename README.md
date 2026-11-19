@@ -63,8 +63,8 @@ pip install -r requirements.txt
 Copia `telegram.example.json` in `telegram.json` (ignorato da Git):
 ```json
 {
-  "token": "123456789:ABCdefGHIjklMNOpqrsTUVwxyz",
-  "chat_id": "987654321"
+  "token": "TUO_TOKEN",
+  "chat_id": "TUO_CHAT_ID"
 }
 ```
 *(In alternativa puoi usare le variabili d'ambiente `TELEGRAM_TOKEN` e `TELEGRAM_CHAT_ID`).*
@@ -79,8 +79,8 @@ Copia `config.example.json` in `config.json` (anch'esso ignorato da Git per tute
   "passo_rinotifica": 5,
   "ignora_festivi": true,
   "festivi_locali": {
-    "12-07": "Sant'Ambrogio"
-  },
+   
+  }//inserisci qui le tue festività locali,
   "settimana": {
     "lun": ["10001", "10002"],
     "mar": [
