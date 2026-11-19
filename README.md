@@ -52,7 +52,7 @@ Progettato per essere leggero, resiliente e pronto per girare ogni 5 minuti su u
 
 ### 2. Installazione
 ```bash
-git clone https://github.com/TUO-USERNAME/notifiche-treno.git
+git clone https://github.com/Shawn0088/Notifiche_Treno.git
 cd notifiche-treno
 python3 -m venv venv
 source venv/bin/activate  # Su Windows: venv\Scripts\activate
@@ -116,7 +116,7 @@ python3 Treni.py test
 ```bash
 ssh ubuntu@IP_DELLA_TUA_MACCHINA_ORACLE
 sudo apt update && sudo apt install -y python3-venv git
-git clone https://github.com/TUO-USERNAME/notifiche-treno.git
+git clone https://github.com/Shawn0088/Notifiche_Treno.git
 cd notifiche-treno
 python3 -m venv venv
 ./venv/bin/pip install -r requirements.txt
@@ -137,7 +137,7 @@ Aggiungi una riga per eseguire il controllo ogni 5 minuti negli orari di circola
 
 ```cron
 # Controllo treni ogni 5 minuti (Lun-Ven 06:00 - 21:59) con battito giornaliero alle 07:00
-*/5 6-21 * * 1-5 cd /home/ubuntu/notifiche-treno && ./venv/bin/python Treni.py server 07:00 >> log.txt 2>&1
+*/5 6-21 * * 1-5 cd /home/ubuntu/Notifiche-treno && ./venv/bin/python Treni.py server 07:00 >> log.txt 2>&1
 ```
 
 * `server 07:00`: invia una volta sola al giorno (dopo le 07:00) un messaggio di conferma che il bot e lo scheduler sono attivi. *(Se prendi treni anche sabato o domenica, usa `*` invece di `1-5`)*.
@@ -156,12 +156,3 @@ Aggiungi una riga per eseguire il controllo ogni 5 minuti negli orari di circola
 | `python Treni.py stazione <nome>` | Cerca il codice interno ViaggiaTreno di una stazione. |
 | `python Treni.py partenze <codice>` | Elenca le prossime partenze da una determinata stazione. |
 
----
-
-## 🔒 Privacy e Sicurezza
-
-Il file `.gitignore` protegge automaticamente da commit accidentali su GitHub:
-* Token e Chat ID Telegram (`telegram.json`, `.env`)
-* I tuoi treni, orari e tratte abituali (`config.json`)
-* File di cache e stato locale (`stato.json`, `*.tmp*`)
-* Log di esecuzione (`log.txt`)
